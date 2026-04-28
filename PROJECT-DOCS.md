@@ -223,7 +223,7 @@ GitHub Pages redeploys automatically on every push. Changes visible at
 | ✅ Done | 4-language switcher (EN/FR/HT/ES) |
 | ✅ Done | Podcast player with episode cards + HTML5 audio |
 | ✅ Done | GitHub Pages deployment (free) |
-| 🔜 Next | Zoom meeting link on blog |
+| ✅ Done | Zoom meeting link on blog (header button + homepage banner + footer) |
 | 🔜 Future | Contact / prayer request form |
 | 🔜 Future | Podcast Spotify/Apple distribution |
 | 🔜 Future | Search inside PDF content (full-text index) |
@@ -232,4 +232,19 @@ GitHub Pages redeploys automatically on every push. Changes visible at
 ---
 
 *Last updated: 2026-04-28 · Developer: Claude (Anthropic)*
+
+---
+
+## 📹 Zoom Implementation Details
+
+Three entry points so the Zoom link is impossible to miss:
+
+| Location | What it does |
+|---|---|
+| **Header button** (top-right, all pages) | Blue `Join Zoom` pill with animated green dot. Shows on every page, every tab. On mobile, text hides and only icon+dot show. |
+| **Homepage banner** (below hero) | Full-width dark blue card: title, big Join button, Meeting ID chip, Passcode chip, phone dial-in instructions. |
+| **Footer** (Reach Us column) | Secondary `Join Zoom Bible Study` pill link. |
+
+CSS classes: `.zoom-header-btn`, `.zoom-banner`, `.zoom-banner-inner`, `.zoom-join-btn`, `.zoom-detail-chip`
+CSS vars added: `--zoom-blue: #2D8CFF`, `--zoom-dark: #1a6fd4`
 *Church: Christian Church of Latter Rain · hilairejr16@GitHub*

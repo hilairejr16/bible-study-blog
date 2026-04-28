@@ -17,6 +17,8 @@
   --shadow:     0 2px 12px rgba(27,58,107,0.12);
   --radius:     8px;
   --transition: 0.22s ease;
+  --zoom-blue:  #2D8CFF;
+  --zoom-dark:  #1a6fd4;
 }
 
 /* ---- Reset & Base ---- */
@@ -118,6 +120,150 @@ img { max-width: 100%; display: block; }
   background: var(--gold);
   border-color: var(--gold);
   color: var(--navy-dark);
+}
+
+/* ---- Zoom Join Button (header) ---- */
+.zoom-header-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--zoom-blue);
+  color: var(--white);
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(45,140,255,0.35);
+}
+.zoom-header-btn:hover {
+  background: var(--zoom-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.zoom-header-btn .zoom-dot {
+  width: 8px;
+  height: 8px;
+  background: #4fffb0;
+  border-radius: 50%;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.7); }
+}
+
+/* ---- Zoom Banner Card (homepage) ---- */
+.zoom-banner {
+  background: linear-gradient(135deg, #1a3a6e 0%, #1565c0 100%);
+  border-bottom: 3px solid var(--zoom-blue);
+  padding: 0;
+}
+
+.zoom-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.zoom-banner-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.zoom-banner-text { flex: 1; min-width: 200px; }
+
+.zoom-banner-text h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  font-weight: normal;
+}
+
+.zoom-banner-text p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+  font-family: Arial, sans-serif;
+}
+
+.zoom-details {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.zoom-detail-chip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.82rem;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+.zoom-detail-chip span {
+  display: block;
+  font-size: 0.65rem;
+  font-family: Arial, sans-serif;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.zoom-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--zoom-blue);
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+  box-shadow: 0 4px 14px rgba(45,140,255,0.4);
+  flex-shrink: 0;
+}
+.zoom-join-btn:hover {
+  background: var(--zoom-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.zoom-phone-note {
+  width: 100%;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.55);
+  font-family: Arial, sans-serif;
+  padding-top: 4px;
+}
+
+@media (max-width: 640px) {
+  .zoom-banner-inner { gap: 16px; }
+  .zoom-details { gap: 10px; }
+  .zoom-join-btn { width: 100%; justify-content: center; }
+  /* Hide the header zoom btn label on very small screens */
+  .zoom-header-btn .zoom-label { display: none; }
+  .zoom-header-btn { padding: 7px 10px; }
 }
 
 /* Navigation */
