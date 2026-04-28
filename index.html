@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Christian Church of Latter Rain — Bible Study Blog for Brothers. Lessons, scriptures, and teaching notes." />
+  <title>Bible Study Blog — Christian Church of Latter Rain</title>
+
+  <!-- Favicon from main site -->
+  <link rel="icon" type="image/x-icon" href="https://www.churchoflatterrain.org/favicon.ico" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="header-top">
+    <a href="#" class="logo-wrap" data-page="home" onclick="navigateTo('home');return false;">
+      <img
+        src="https://lirp.cdn-website.com/61704856/dms3rep/multi/opt/No+Location+CCOLR-01-1920w.webp"
+        alt="Christian Church of Latter Rain Logo"
+        onerror="this.style.display='none'"
+      />
+      <div class="site-title">
+        <strong>Christian Church of Latter Rain</strong>
+        <span data-i18n="hero_badge">Brothers Bible Study Blog</span>
+      </div>
+    </a>
+
+    <div class="header-controls">
+      <div class="lang-switcher" aria-label="Language Selector">
+        <button class="lang-btn active" data-lang="en" title="English">EN</button>
+        <button class="lang-btn" data-lang="fr" title="Français">FR</button>
+        <button class="lang-btn" data-lang="ht" title="Kreyòl Ayisyen">HT</button>
+        <button class="lang-btn" data-lang="es" title="Español">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="site-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="#" data-page="home" class="active"><span class="nav-icon">🏠</span> <span data-i18n="nav_home">Home</span></a></li>
+      <li><a href="#" data-page="lessons"><span class="nav-icon">📚</span> <span data-i18n="nav_lessons">Lessons</span></a></li>
+      <li><a href="#" data-page="bible"><span class="nav-icon">📖</span> <span data-i18n="nav_bible">Bible</span></a></li>
+      <li><a href="#" data-page="podcast"><span class="nav-icon">🎙️</span> <span data-i18n="nav_podcast">Podcast</span></a></li>
+      <li><a href="#" data-page="about"><span class="nav-icon">ℹ️</span> <span data-i18n="nav_about">About</span></a></li>
+      <li style="margin-left:auto;">
+        <a href="https://www.churchoflatterrain.org/" target="_blank" style="font-size:0.78rem;opacity:0.7;">
+          ↗ Main Website
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===================== PAGE: HOME ===================== -->
+<div id="page-home" class="page active">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge" data-i18n="hero_badge">Brothers Bible Study</div>
+    <h1><em data-i18n="hero_title">Bible Study Lessons</em></h1>
+    <p data-i18n="hero_sub">A Family for All of God's Children</p>
+    <div class="hero-verse" data-i18n="hero_verse">
+      "Your word is a lamp to my feet and a light to my path." — Psalm 119:105
+    </div>
+  </section>
+
+  <!-- Search -->
+  <section class="search-section">
+    <div class="search-wrap">
+      <input
+        type="search"
+        id="search-input"
+        data-i18n-ph="search_ph"
+        placeholder="Search lessons, scriptures, topics..."
+        aria-label="Search lessons"
+      />
+      <button id="search-btn" data-i18n="search_btn">Search</button>
+    </div>
+    <div id="search-results-info"></div>
+  </section>
+
+  <!-- Lessons -->
+  <main class="main-content">
+    <div class="section-header">
+      <h2 data-i18n="all_lessons">All Lessons</h2>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="filter-bar" id="filter-bar">
+      <button class="filter-btn active" data-filter="all" data-i18n="all_lessons">All Lessons</button>
+      <button class="filter-btn" data-filter="Prayer">Prayer</button>
+      <button class="filter-btn" data-filter="Holy Spirit">Holy Spirit</button>
+      <button class="filter-btn" data-filter="Spiritual Warfare">Spiritual Warfare</button>
+      <button class="filter-btn" data-filter="Discipleship">Discipleship</button>
+      <button class="filter-btn" data-filter="Faith">Faith</button>
+      <button class="filter-btn" data-filter="Scripture">Scripture</button>
+    </div>
+
+    <!-- Lessons Grid (populated by app.js) -->
+    <div class="lessons-grid" id="lessons-grid">
+      <div class="bible-loading"><div class="spinner"></div> Loading lessons...</div>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== PAGE: LESSONS (same as home grid) ===================== -->
+<div id="page-lessons" class="page">
+  <main class="main-content">
+    <div class="section-header">
+      <h2 data-i18n="all_lessons">All Lessons</h2>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" data-i18n="all_lessons">All Lessons</button>
+      <button class="filter-btn" data-filter="Prayer">Prayer</button>
+      <button class="filter-btn" data-filter="Holy Spirit">Holy Spirit</button>
+      <button class="filter-btn" data-filter="Spiritual Warfare">Spiritual Warfare</button>
+      <button class="filter-btn" data-filter="Faith">Faith</button>
+    </div>
+
+    <div class="lessons-grid" id="lessons-grid-2">
+      <!-- Mirrored by JS -->
+    </div>
+  </main>
+</div>
+
+<!-- ===================== PAGE: BIBLE ===================== -->
+<div id="page-bible" class="page">
+
+  <!-- Bible Language Tabs -->
+  <div style="background:var(--white);padding:14px 20px;border-bottom:1px solid rgba(0,0,0,0.08);">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="bible-lang-tabs">
+        <button class="bible-lang-tab active" data-bible-lang="en">🇺🇸 English (KJV / WEB)</button>
+        <button class="bible-lang-tab" data-bible-lang="fr">🇫🇷 Français (LSG)</button>
+        <button class="bible-lang-tab" data-bible-lang="ht">🇭🇹 Kreyòl Ayisyen (BDH)</button>
+        <button class="bible-lang-tab" data-bible-lang="es">🇪🇸 Español (RVR1960)</button>
+      </div>
+
+      <!-- Passage Quick Lookup -->
+      <div class="bible-search-bar">
+        <input type="text" id="bible-search-input" placeholder="Go to passage: e.g. John 3:16 or Romans 8" />
+        <button id="bible-search-btn">Go</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bible-layout">
+    <!-- Sidebar: Book List -->
+    <aside class="bible-sidebar">
+      <h3>Books of the Bible</h3>
+      <ul class="book-list" id="book-list"></ul>
+    </aside>
+
+    <!-- Main: Scripture Text -->
+    <div class="bible-main">
+
+      <!-- English Controls -->
+      <div class="bible-controls" id="bible-en-controls">
+        <label for="chapter-select">Chapter:</label>
+        <select id="chapter-select"></select>
+
+        <label for="translation-select">Translation:</label>
+        <select id="translation-select">
+          <option value="kjv">KJV — King James Version</option>
+          <option value="web">WEB — World English Bible</option>
+          <option value="bbe">BBE — Bible in Basic English</option>
+          <option value="asv">ASV — American Standard Version</option>
+        </select>
+
+        <div class="bible-nav-btns">
+          <button class="btn-nav" id="prev-chapter">← Prev</button>
+          <button class="btn-nav" id="next-chapter">Next →</button>
+        </div>
+      </div>
+
+      <!-- English Reader -->
+      <div id="bible-en-reader">
+        <div id="bible-text-box" class="bible-text-box">
+          <div class="bible-loading">
+            <div class="spinner"></div> Select a book to begin reading...
+          </div>
+        </div>
+      </div>
+
+      <!-- External Language Link (FR / HT / ES) -->
+      <div id="bible-ext-link" style="display:none;margin-top:10px;"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: PODCAST ===================== -->
+<div id="page-podcast" class="page">
+  <main class="main-content">
+    <div class="podcast-coming-soon">
+      <div class="icon">🎙️</div>
+      <h2 data-i18n="podcast_title">Podcast — Coming Soon</h2>
+      <p data-i18n="podcast_desc">
+        In the future, our Zoom Bible Study recordings will be available here as a podcast. Stay tuned!
+      </p>
+      <p data-i18n="podcast_note">
+        Zoom session recordings will be converted and published here for brothers to listen anytime, on any device.
+      </p>
+      <div style="margin-top:30px;padding:20px;background:rgba(27,58,107,0.06);border-radius:8px;font-family:Arial,sans-serif;font-size:0.88rem;color:#555;">
+        <strong>How it will work:</strong>
+        <ul style="list-style:disc;padding-left:20px;margin-top:10px;line-height:2;">
+          <li>Record your Zoom Bible Study session</li>
+          <li>Upload the recording to this blog</li>
+          <li>Brothers can listen on phone, tablet, or computer</li>
+          <li>Episodes available in multiple languages</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== PAGE: ABOUT ===================== -->
+<div id="page-about" class="page">
+  <main class="main-content">
+    <div class="about-section">
+      <h2 data-i18n="about_title">About This Blog</h2>
+      <p data-i18n="about_desc">
+        This blog is dedicated to the brothers of Christian Church of Latter Rain. It provides access to Bible study lessons, scriptures, and teaching notes from our pastor and ministry.
+      </p>
+      <p>
+        All lessons are available as PDF documents. Use your browser's built-in <strong>Ctrl+F</strong> (or <strong>⌘+F</strong> on Mac) to search within any open lesson for specific words, scriptures, or topics.
+      </p>
+
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-icon">📱</div>
+          <h4>Mobile Friendly</h4>
+          <p>Access lessons on any device — phone, tablet, laptop, or desktop.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🌐</div>
+          <h4>4 Languages</h4>
+          <p>English, French, Haitian Creole, and Spanish — toggle at the top of the page.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📖</div>
+          <h4>Full Bible</h4>
+          <p>All 66 books available in English, French, Haitian Creole, and Spanish.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔍</div>
+          <h4>Searchable</h4>
+          <p>Search lessons by topic, scripture reference, or keyword.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📄</div>
+          <h4>PDF Lessons</h4>
+          <p>Download or view any lesson directly in your browser. Press Ctrl+F inside a PDF to search.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🎙️</div>
+          <h4>Podcast (Coming Soon)</h4>
+          <p>Zoom Bible Study recordings will be available as a podcast in the future.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;padding:24px;background:var(--white);border-radius:8px;box-shadow:var(--shadow);">
+        <h3 style="color:var(--navy);margin-bottom:12px;">Contact & Main Website</h3>
+        <p style="font-family:Arial,sans-serif;color:#555;line-height:2;">
+          📍 West Philadelphia · Nanticoke · Lancaster, PA<br>
+          📞 <a href="tel:+16106099016">(610) 609-9016</a><br>
+          🌐 <a href="https://www.churchoflatterrain.org/" target="_blank">www.churchoflatterrain.org</a>
+        </p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== PDF MODAL ===================== -->
+<div id="pdf-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Lesson Viewer">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="modal-title">Lesson</h3>
+      <div class="modal-actions">
+        <span class="modal-tip">Press Ctrl+F to search inside the PDF</span>
+        <a id="modal-download" href="#" download class="btn-secondary" style="color:white;border-color:rgba(255,255,255,0.3);">
+          ⬇ Download
+        </a>
+        <button class="btn-close" onclick="closeModal()" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <img
+        src="https://lirp.cdn-website.com/61704856/dms3rep/multi/opt/No+Location+CCOLR-01-1920w.webp"
+        alt="CCOLR Logo"
+        style="height:50px;margin-bottom:12px;"
+        onerror="this.style.display='none'"
+      />
+      <h4 data-i18n="footer_main">Christian Church of Latter Rain</h4>
+      <p data-i18n="footer_tag">A Family for All of God's Children</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-i18n="footer_links">Quick Links</h4>
+      <p>
+        <a href="#" data-page="lessons">📚 Lessons</a><br>
+        <a href="#" data-page="bible">📖 Bible Reader</a><br>
+        <a href="#" data-page="podcast">🎙️ Podcast</a><br>
+        <a href="https://www.churchoflatterrain.org/" target="_blank" data-i18n="footer_visit">↗ Main Website</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-i18n="footer_reach">Reach Us</h4>
+      <p>
+        📞 <a href="tel:+16106099016" data-i18n="footer_phone">(610) 609-9016</a><br>
+        📍 West Philadelphia<br>
+        📍 Nanticoke, PA<br>
+        📍 Lancaster, PA
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-i18n="footer_copy">© 2026 Christian Church of Latter Rain. All rights reserved.</span>
+    <span>Built with ♥ for the Brothers</span>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/app.js"></script>
+<script src="js/bible.js"></script>
+
+<script>
+  // Mirror lessons to the Lessons page tab
+  const observer = new MutationObserver(() => {
+    const grid2 = document.getElementById('lessons-grid-2');
+    const grid1 = document.getElementById('lessons-grid');
+    if (grid2 && grid1) grid2.innerHTML = grid1.innerHTML;
+  });
+  const g1 = document.getElementById('lessons-grid');
+  if (g1) observer.observe(g1, { childList: true, subtree: true });
+</script>
+
+</body>
+</html>

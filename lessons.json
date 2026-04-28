@@ -1,0 +1,57 @@
+{
+  "lessons": [
+    {
+      "id": "001",
+      "title": "The Power of Prayer",
+      "titleFr": "La Puissance de la Prière",
+      "titleHt": "Pouvwa Lapriyè a",
+      "titleEs": "El Poder de la Oración",
+      "date": "2026-04-27",
+      "category": "Prayer",
+      "description": "A foundational study on prayer as our direct line of communication with God.",
+      "descriptionFr": "Une étude fondamentale sur la prière comme notre ligne de communication directe avec Dieu.",
+      "descriptionHt": "Yon etid fondamantal sou lapriyè kòm liy kominikasyon dirèk nou avèk Bondye.",
+      "descriptionEs": "Un estudio fundamental sobre la oración como nuestra línea directa de comunicación con Dios.",
+      "tags": ["prayer", "faith", "holy spirit", "brothers"],
+      "scriptures": ["Matthew 6:9-13", "James 5:16", "Philippians 4:6-7"],
+      "pdf": "pdfs/power-of-prayer.pdf",
+      "featured": true
+    },
+    {
+      "id": "002",
+      "title": "Walking in the Spirit",
+      "titleFr": "Marcher dans l'Esprit",
+      "titleHt": "Mache nan Lespri a",
+      "titleEs": "Caminando en el Espíritu",
+      "date": "2026-04-20",
+      "category": "Holy Spirit",
+      "description": "Understanding what it means to walk in step with the Holy Spirit daily.",
+      "descriptionFr": "Comprendre ce que signifie marcher au rythme du Saint-Esprit quotidiennement.",
+      "descriptionHt": "Konprann sa sa vle di mache ak Sentespri a chak jou.",
+      "descriptionEs": "Entender lo que significa caminar al ritmo del Espíritu Santo diariamente.",
+      "tags": ["holy spirit", "discipleship", "brothers"],
+      "scriptures": ["Galatians 5:16-25", "Romans 8:1-14"],
+      "pdf": "pdfs/walking-in-the-spirit.pdf",
+      "featured": false
+    },
+    {
+      "id": "003",
+      "title": "The Armor of God",
+      "titleFr": "L'Armure de Dieu",
+      "titleHt": "Zam Bondye a",
+      "titleEs": "La Armadura de Dios",
+      "date": "2026-04-13",
+      "category": "Spiritual Warfare",
+      "description": "A detailed study of Ephesians 6 — every piece of armor and how to use it.",
+      "descriptionFr": "Une étude détaillée d'Éphésiens 6 — chaque pièce d'armure et comment l'utiliser.",
+      "descriptionHt": "Yon etid detaye Efezyen 6 — chak moso zam ak jan pou itilize yo.",
+      "descriptionEs": "Un estudio detallado de Efesios 6 — cada pieza de la armadura y cómo usarla.",
+      "tags": ["spiritual warfare", "brothers", "faith"],
+      "scriptures": ["Ephesians 6:10-18"],
+      "pdf": "pdfs/armor-of-god.pdf",
+      "featured": false
+    }
+  ],
+  "categories": ["Prayer", "Holy Spirit", "Spiritual Warfare", "Discipleship", "Scripture", "Faith", "Worship"],
+  "languages": ["en", "fr", "ht", "es"]
+}
