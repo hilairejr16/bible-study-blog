@@ -381,7 +381,9 @@ function navigateTo(page) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   // Initialize Bible when first opened
-  if (page === 'bible' && typeof initBible === 'function') initBible();
+  if (page === 'bible'   && typeof initBible    === 'function') initBible();
+  // Initialize Podcast when first opened
+  if (page === 'podcast' && typeof initPodcast  === 'function') initPodcast();
 }
 
 // ---- PDF Viewer Modal ----

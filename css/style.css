@@ -1025,6 +1025,290 @@ img { max-width: 100%; display: block; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 
+/* ============================================
+   PODCAST STYLES
+   ============================================ */
+
+/* Podcast page wrapper */
+.podcast-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Header band */
+.podcast-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  border-left: 6px solid var(--gold);
+}
+
+.podcast-logo {
+  font-size: 3.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.podcast-title {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.podcast-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.podcast-meta {
+  font-size: 0.8rem;
+  color: var(--gray);
+  font-family: Arial, sans-serif;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Empty / coming-soon state */
+.podcast-empty {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.podcast-empty-icon { font-size: 3.5rem; margin-bottom: 14px; }
+.podcast-empty h3 { color: var(--navy); font-size: 1.4rem; margin-bottom: 10px; }
+.podcast-empty > p { color: var(--text-light); font-family: Arial, sans-serif; margin-bottom: 30px; }
+
+/* Step-by-step how-to */
+.how-to-add {
+  text-align: left;
+  background: var(--cream);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid rgba(27,58,107,0.1);
+}
+
+.how-to-add h4 {
+  color: var(--navy);
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 8px;
+}
+
+.how-to-add ol {
+  list-style: none;
+  counter-reset: steps;
+  padding: 0;
+}
+
+.how-to-add ol li {
+  counter-increment: steps;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.how-to-add ol li::before {
+  content: counter(steps);
+  background: var(--navy);
+  color: var(--white);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.how-to-add ol li span { display: block; }
+.how-to-add ol li em { font-style: normal; background: rgba(200,169,81,0.2); padding: 1px 4px; border-radius: 3px; }
+.how-to-add ol li code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.82em;
+  background: rgba(27,58,107,0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--navy);
+}
+
+.how-to-add a { color: var(--navy); text-decoration: underline; }
+
+/* Episode template code block */
+.episode-template {
+  margin-top: 22px;
+}
+
+.episode-template p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.episode-template pre {
+  background: var(--navy-dark);
+  color: #e8e8e8;
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-family: 'Courier New', monospace;
+  overflow-x: auto;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+/* File size tip */
+.file-tip {
+  margin-top: 18px;
+  background: rgba(200,169,81,0.12);
+  border: 1px solid rgba(200,169,81,0.35);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Episodes list */
+.episodes-list { display: flex; flex-direction: column; gap: 20px; }
+
+.episode-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  transition: transform var(--transition);
+}
+
+.episode-card:hover { transform: translateY(-2px); }
+
+.ep-number {
+  background: var(--navy-dark);
+  color: var(--gold);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  flex-shrink: 0;
+}
+
+.ep-body { flex: 1; padding: 22px 24px; }
+
+.ep-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.ep-date { font-size: 0.78rem; color: var(--gray); font-family: Arial, sans-serif; }
+
+.ep-cat {
+  font-size: 0.7rem;
+  background: var(--navy);
+  color: var(--white);
+  padding: 2px 9px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+}
+
+.ep-dur {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+}
+
+.ep-title {
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.ep-desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.ep-scripts {
+  font-size: 0.82rem;
+  color: var(--navy);
+  font-style: italic;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+/* HTML5 audio player styling */
+.ep-player audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  margin-top: 12px;
+  accent-color: var(--navy);
+}
+
+.ep-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.ep-no-audio {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--gray);
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  padding: 10px;
+  background: var(--gray-light);
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .podcast-header { flex-direction: column; }
+  .ep-number { writing-mode: horizontal-tb; transform: none; min-width: auto; padding: 8px 16px; }
+  .episode-card { flex-direction: column; }
+  .podcast-empty { padding: 24px 16px; }
+  .how-to-add { padding: 20px 16px; }
+}
+
 /* ---- Print ---- */
 @media print {
   .site-header, .site-nav, .search-section, .filter-bar, .site-footer, .card-actions { display: none !important; }

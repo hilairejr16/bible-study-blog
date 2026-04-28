@@ -1,0 +1,31 @@
+{
+  "podcast": {
+    "title": "CCOLR Brothers Bible Study",
+    "titleFr": "Étude Biblique des Frères CCOLR",
+    "titleHt": "Etid Biblik Frè CCOLR",
+    "titleEs": "Estudio Bíblico de Hermanos CCOLR",
+    "description": "Weekly Bible Study sessions from Christian Church of Latter Rain — Pastor, brothers, and ministry teaching the Word of God.",
+    "descriptionFr": "Sessions hebdomadaires d'étude biblique de l'Église Chrétienne de la Dernière Pluie.",
+    "descriptionHt": "Sesyon etid biblik chak semèn nan Legliz Kretyen Plimedènyè.",
+    "descriptionEs": "Sesiones semanales de estudio bíblico de la Iglesia Cristiana de la Lluvia Tardía.",
+    "author": "Christian Church of Latter Rain",
+    "website": "https://www.churchoflatterrain.org/",
+    "language": "en"
+  },
+  "episodes": [
+    {
+      "id": "001",
+      "title": "Sample Episode — Brothers Bible Study",
+      "titleFr": "Épisode Exemple — Étude Biblique des Frères",
+      "titleHt": "Episòd Egzanp — Etid Biblik Frè",
+      "titleEs": "Episodio de Muestra — Estudio Bíblico de Hermanos",
+      "date": "2026-04-28",
+      "description": "This is a placeholder episode. Replace this entry in podcast.json with your first real Zoom recording. See the README for step-by-step instructions on how to add episodes.",
+      "duration": "00:00",
+      "scriptures": ["Psalm 119:105"],
+      "category": "Bible Study",
+      "audio": "",
+      "isPlaceholder": true
+    }
+  ]
+}

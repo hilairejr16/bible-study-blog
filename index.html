@@ -195,27 +195,11 @@
 
 <!-- ===================== PAGE: PODCAST ===================== -->
 <div id="page-podcast" class="page">
-  <main class="main-content">
-    <div class="podcast-coming-soon">
-      <div class="icon">🎙️</div>
-      <h2 data-i18n="podcast_title">Podcast — Coming Soon</h2>
-      <p data-i18n="podcast_desc">
-        In the future, our Zoom Bible Study recordings will be available here as a podcast. Stay tuned!
-      </p>
-      <p data-i18n="podcast_note">
-        Zoom session recordings will be converted and published here for brothers to listen anytime, on any device.
-      </p>
-      <div style="margin-top:30px;padding:20px;background:rgba(27,58,107,0.06);border-radius:8px;font-family:Arial,sans-serif;font-size:0.88rem;color:#555;">
-        <strong>How it will work:</strong>
-        <ul style="list-style:disc;padding-left:20px;margin-top:10px;line-height:2;">
-          <li>Record your Zoom Bible Study session</li>
-          <li>Upload the recording to this blog</li>
-          <li>Brothers can listen on phone, tablet, or computer</li>
-          <li>Episodes available in multiple languages</li>
-        </ul>
-      </div>
+  <div class="podcast-page">
+    <div id="podcast-content">
+      <div class="bible-loading"><div class="spinner"></div> Loading episodes...</div>
     </div>
-  </main>
+  </div>
 </div>
 
 <!-- ===================== PAGE: ABOUT ===================== -->
@@ -336,6 +320,7 @@
 <!-- Scripts -->
 <script src="js/app.js"></script>
 <script src="js/bible.js"></script>
+<script src="js/podcast.js"></script>
 
 <script>
   // Mirror lessons to the Lessons page tab
