@@ -231,7 +231,7 @@ GitHub Pages redeploys automatically on every push. Changes visible at
 
 ---
 
-*Last updated: 2026-04-28 · Developer: Claude (Anthropic)*
+*Last updated: 2026-04-28 · Developer: Claude (Anthropic) · 9 real PDF lessons added*
 
 ---
 
